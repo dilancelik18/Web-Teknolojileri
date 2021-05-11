@@ -1,0 +1,56 @@
+.bg-light{
+    background-color: rgb(255, 165, 0) !important;
+}
+.generic{
+margin-top: 0%;
+}
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, .7)),url('../img/3.jpg');
+    background-size:cover;
+    background-position:center ;
+    background-attachment: fixed;
+}
+#hero .container{
+    height: 50vh;
+
+}
+
+section{
+    padding: 50px 0;
+}
+#her{
+    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('../img/bur.jpg');
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#her .container{
+    height: 50vh;
+}
+.yuk{
+    height: 40vh;
+}
+#miras{background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('../img/miras3.jpg');
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+#miras .container{
+    height: 40vh;
+}
+
+#irgandi .container{
+
+    background-color:rgb(255, 220, 125);
+    position: sticky;
+}
+#ort{
+    margin: 50px auto;
+}
+
+#kale .container{
+    background-color:rgb(255, 220, 125);
+
+    position: sticky;
+}
