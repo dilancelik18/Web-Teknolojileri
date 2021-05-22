@@ -32,7 +32,7 @@
                  <li class="nav-item">
                       <a class="nav-link" href="ilgialan.html">İlgi Alanlarım</a>  
                  <li class="nav-item">
-                    <a class="nav-link" href="login.html">Giriş yap</a>
+                    <a class="nav-link" href="login.php">Giriş yap</a>
                  <li class="nav-item">
                     <a class="nav-link" href="contact.html">İletişim</a>
                  </li>
@@ -42,35 +42,39 @@
             </div>
           </nav>
       </header>
-      <section>
-        
-          <form class="row g-3">
-            <div class="col-auto">
-              <label for="staticEmail2" class="visually-hidden">Email</label>
-              <input type="email"  class="form-control" id="inputEmail2" placeholder="email@example.com">
-            </div>
-            <div class="col-auto">
-              <label for="inputPassword2" class="visually-hidden">Password</label>
-              <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-            </div>
-            <div class="col-auto">
-              <button type="submit" class="btn btn-primary mb-3">Giriş Yap</button>
-            </div>
-          </form>
-      </section>
-      <footer class="py-2 bg-dark text-white text-center">
-        web-teknolojileri-projesi Dilan ÇELİK 2021
-      </footer>
-          <!-- Optional JavaScript; choose one of the two! -->
-      
-          <!-- Option 1: Bootstrap Bundle with Popper -->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-      
-          <!-- Option 2: Separate Popper and Bootstrap JS -->
-          <!--
-          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
-          -->
-          
-        </body>
-      </html>
+      <main>
+          <?php
+          include("kullanici.php");
+          if(($_POST["email"]==$user) and($_POST["password"]==$pass))
+          {
+              $_SESSION["login"]="true";
+              $_SESSION["user"]=$user;
+              $_SESSION["pass"]=$pass;
+              echo("Giriş Yaptınız... <br>");
+              echo("HOŞGELDİNİZ:)")
+          }
+          else{
+              echo"Kullanıcı adı veya şifre yanlış.<br>";
+              echo"Tekrar Deneyiniz";
+              header("Refresh:1; url=login.php");
+
+          }
+          ?>
+          </main>
+
+<footer class="py-2 bg-dark text-white text-center">
+  web-teknolojileri-projesi Dilan ÇELİK 2021
+</footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+    -->
+    
+  </body>
+</html>

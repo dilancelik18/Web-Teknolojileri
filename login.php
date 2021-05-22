@@ -42,93 +42,22 @@
             </div>
           </nav>
       </header>
+      <main>
+        <div class= "container">
+          <form action="ayar.php" method="POST">
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="text" name ="email" class="form-control" placeholder="Email giriniz" required="required">
+           </div>
+           <div class="form-group">
+              <label for="password">Şifre</label>
+              <input type="text" name ="password" class="form-control" placeholder="Şifre giriniz" required="required">
+           </div>
 
-		<div class="bg-warning text-dark jumbotron balikcilar-jumbotron">
+<button class="btn btn btn-warning" type="submit">Gönder</button>
+</form>
+</main>
 
-			<div class="container">
-
-				<div class="col-md-6 px-0">
-					<h1 class="display-4 font-italic">
-						Başarılı!!
-					</h1>
-				</div>
-
-			</div>
-
-		</div>
-
-	</header>
-	
-	<main>
-
-		<div class="container">
-			
-			<div class="row">
-
-
-
-
-				<script type="text/javascript">
-
-					function getParameterByName(name, url) 
-					{
-		            	if (!url) url = window.location.href;
-    		       		name = name.replace(/[\[\]]/g, '\\$&');
-        		    	var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-            		    	results = regex.exec(url);
-           				if (!results) return null;
-           				if (!results[2]) return '';
-           				return decodeURIComponent(results[2].replace(/\+/g, ' '));
-        			}
-
-  				    var name = getParameterByName('name');
-  				    var email = getParameterByName('email');
-  				    var message = getParameterByName('message');
-
-				</script>
-
-				<table class="table">
-						<thead class="table-warning">
-							<tr>
-								<th>İşlem Başarılı :)</th>
-							</tr>
-						</thead>
-
-						<tbody>
-							<tr>
-								<td>İsminiz</td>
-								<td>
-									<script>document.write(name);
-									</script>
-								</td>
-							</tr>
-	
-							<tr>
-								<td>E-Mail</td>
-								<td>
-									<script>document.write(email);
-									</script>
-								</td>
-							</tr>
-	
-							<tr>
-								<td>Mesajınız</td>
-								<td>
-									<script>document.write(message);
-									</script>
-								</td>
-							</tr>
-	
-						</tbody>
-					
-				</table>	
-
-
-			</div>
-
-		</div>
-
-	</main>
       <footer class="py-2 bg-dark text-white text-center">
         web-teknolojileri-projesi Dilan ÇELİK 2021
       </footer>
@@ -145,3 +74,4 @@
           
         </body>
       </html>
+   
