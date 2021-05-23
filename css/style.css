@@ -54,3 +54,7 @@ section{
 
     position: sticky;
 }
+#player .container{
+    padding: 50%;
+    margin-left: 50%;
+}

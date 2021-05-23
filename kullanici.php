@@ -1,5 +1,5 @@
 <?php 
  
-$user ="admin";
+$user ="admin@gmail.com";
 $pass ="123";
 ?>

@@ -49,8 +49,8 @@
               <label for="email">E-mail</label>
               <input type="text" name ="email" class="form-control" placeholder="Email giriniz" required="required">
            </div>
-           <div class="form-group">
-              <label for="password">Şifre</label>
+           <div class="form-group " >
+              <label for="password" >Şifre</label>
               <input type="text" name ="password" class="form-control" placeholder="Şifre giriniz" required="required">
            </div>
 
